@@ -52,7 +52,7 @@ public:
         friend class ContactsTransientStore;
 
     protected:
-        const_iterator(const MemoryTable *table, quint32 position);
+        const_iterator(const MemoryTable *table, size_t position);
 
     public:
         const_iterator(const const_iterator &other);

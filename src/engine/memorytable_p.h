@@ -50,7 +50,7 @@ public:
         friend class MemoryTable;
 
     protected:
-        const_iterator(const MemoryTable *table, quint32 position);
+        const_iterator(const MemoryTable *table, size_t position);
 
         const MemoryTable *table;
         quint32 position;

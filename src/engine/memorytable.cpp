@@ -338,7 +338,7 @@ quint32 MemoryTablePrivate::allocate(quint32 size, TableMetadata *table, bool in
 
     // Align the allocation so that the header is directly accessible
     quint32 allocationSize = static_cast<quint32>(requiredSpace(size));
-    allocationSize = roundUp(allocationSize, sizeof(quint32));
+    allocationSize = roundUp(allocationSize, static_cast<quint32>(sizeof(quint32)));
 
     if (table->freeList) {
         // Try to reuse a freed block
